@@ -101,22 +101,12 @@
         "outbound": "direct"
       },
       {
-        "rule_set": "bilibili_domain",
-        "action": "route",
-        "outbound": "bilibili"
-      },
-      {
         "rule_set": [
           "netflix_ip",
           "netflix_domain"
         ],
         "action": "route",
         "outbound": "netflix"
-      },
-      {
-        "rule_set": "bahamut_domain",
-        "action": "route",
-        "outbound": "bahamut"
       },
       {
         "rule_set": "youtube_domain",
@@ -198,20 +188,6 @@
         "type": "remote",
         "format": "binary",
         "url": "https://ghfast.top/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo-lite/geosite/apple.srs",
-        "download_detour": "direct"
-      },
-      {
-        "tag": "bahamut_domain",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://ghfast.top/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo-lite/geosite/bahamut.srs",
-        "download_detour": "direct"
-      },
-      {
-        "tag": "bilibili_domain",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://ghfast.top/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo-lite/geosite/bilibili.srs",
         "download_detour": "direct"
       },
       {
@@ -301,15 +277,10 @@
       "type": "selector",
       "outbounds": [
         "hk",
-        "hk-auto",
         "tw",
-        "tw-auto",
         "jp",
-        "jp-auto",
         "sg",
-        "sg-auto",
         "us",
-        "us-auto",
         "all",
         "all-auto",
         "direct"
@@ -323,15 +294,10 @@
         "proxy",
         "direct",
         "hk",
-        "hk-auto",
         "tw",
-        "tw-auto",
         "jp",
-        "jp-auto",
         "sg",
-        "sg-auto",
         "us",
-        "us-auto",
         "all",
         "all-auto"
       ],
@@ -344,15 +310,10 @@
         "proxy",
         "direct",
         "hk",
-        "hk-auto",
         "tw",
-        "tw-auto",
         "jp",
-        "jp-auto",
         "sg",
-        "sg-auto",
         "us",
-        "us-auto",
         "all",
         "all-auto"
       ],
@@ -365,40 +326,14 @@
         "proxy",
         "direct",
         "hk",
-        "hk-auto",
         "tw",
-        "tw-auto",
         "jp",
-        "jp-auto",
         "sg",
-        "sg-auto",
         "us",
-        "us-auto",
         "all",
         "all-auto"
       ],
       "default": "proxy"
-    },
-    {
-      "tag": "bilibili",
-      "type": "selector",
-      "outbounds": [
-        "proxy",
-        "direct",
-        "hk",
-        "hk-auto",
-        "tw",
-        "tw-auto",
-        "jp",
-        "jp-auto",
-        "sg",
-        "sg-auto",
-        "us",
-        "us-auto",
-        "all",
-        "all-auto"
-      ],
-      "default": "direct"
     },
     {
       "tag": "netflix",
@@ -407,36 +342,10 @@
         "proxy",
         "direct",
         "hk",
-        "hk-auto",
         "tw",
-        "tw-auto",
         "jp",
-        "jp-auto",
         "sg",
-        "sg-auto",
         "us",
-        "us-auto",
-        "all",
-        "all-auto"
-      ],
-      "default": "proxy"
-    },
-    {
-      "tag": "bahamut",
-      "type": "selector",
-      "outbounds": [
-        "proxy",
-        "direct",
-        "hk",
-        "hk-auto",
-        "tw",
-        "tw-auto",
-        "jp",
-        "jp-auto",
-        "sg",
-        "sg-auto",
-        "us",
-        "us-auto",
         "all",
         "all-auto"
       ],
@@ -449,15 +358,10 @@
         "proxy",
         "direct",
         "hk",
-        "hk-auto",
         "tw",
-        "tw-auto",
         "jp",
-        "jp-auto",
         "sg",
-        "sg-auto",
         "us",
-        "us-auto",
         "all",
         "all-auto"
       ],
@@ -470,15 +374,10 @@
         "proxy",
         "direct",
         "hk",
-        "hk-auto",
         "tw",
-        "tw-auto",
         "jp",
-        "jp-auto",
         "sg",
-        "sg-auto",
         "us",
-        "us-auto",
         "all",
         "all-auto"
       ],
@@ -491,15 +390,10 @@
         "proxy",
         "direct",
         "hk",
-        "hk-auto",
         "tw",
-        "tw-auto",
         "jp",
-        "jp-auto",
         "sg",
-        "sg-auto",
         "us",
-        "us-auto",
         "all",
         "all-auto"
       ],
@@ -512,15 +406,10 @@
         "proxy",
         "direct",
         "hk",
-        "hk-auto",
         "tw",
-        "tw-auto",
         "jp",
-        "jp-auto",
         "sg",
-        "sg-auto",
         "us",
-        "us-auto",
         "all",
         "all-auto"
       ],
@@ -557,39 +446,7 @@
       "outbounds": []
     },
     {
-      "tag": "hk-auto",
-      "type": "urltest",
-      "outbounds": [],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 50
-    },
-    {
-      "tag": "tw-auto",
-      "type": "urltest",
-      "outbounds": [],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 50
-    },
-    {
-      "tag": "jp-auto",
-      "type": "urltest",
-      "outbounds": [],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 50
-    },
-    {
       "tag": "sg-auto",
-      "type": "urltest",
-      "outbounds": [],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 50
-    },
-    {
-      "tag": "us-auto",
       "type": "urltest",
       "outbounds": [],
       "url": "https://www.gstatic.com/generate_204",
@@ -611,15 +468,10 @@
         "direct",
         "proxy",
         "hk",
-        "hk-auto",
         "tw",
-        "tw-auto",
         "jp",
-        "jp-auto",
         "sg",
-        "sg-auto",
         "us",
-        "us-auto",
         "all",
         "all-auto"
       ],
@@ -654,12 +506,6 @@
     }
   ],
   "experimental": {
-    "clash_api": {
-      "external_controller": "127.0.0.1:9090",
-      "external_ui": "ui",
-      "external_ui_download_url": "https://ghfast.top/https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
-      "external_ui_download_detour": "direct"
-    },
     "cache_file": {
       "enabled": true,
       "store_fakeip": true
