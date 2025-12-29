@@ -440,18 +440,18 @@
       "type": "selector",
       "outbounds": []
     },
-    {
-      "tag": "all",
-      "type": "selector",
-      "outbounds": []
-    },
-    {
+        {
       "tag": "sg-auto",
       "type": "urltest",
       "outbounds": [],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "1m",
       "tolerance": 50
+    },
+    {
+      "tag": "all",
+      "type": "selector",
+      "outbounds": []
     },
     {
       "tag": "all-auto",
